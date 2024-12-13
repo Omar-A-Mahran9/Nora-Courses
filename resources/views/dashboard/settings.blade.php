@@ -38,28 +38,6 @@
                             href="javascript:" onclick="changeSettingView('general')">{{ __('General') }}</a>
                     </li>
                     <!--end::Nav item-->
-
-                    <!--begin::Nav item-->
-                    <li class="nav-item">
-                        <a class="nav-link text-active-primary me-6 setting-label" id="seo-settings-label"
-                            href="javascript:" onclick="changeSettingView('seo')">{{ __('Seo') }}</a>
-                    </li>
-                    <!--end::Nav item-->
-
-                    <!--begin::Nav item-->
-                    <li class="nav-item">
-                        <a class="nav-link text-active-primary me-6 setting-label" id="website-settings-label"
-                            href="javascript:" onclick="changeSettingView('website')">{{ __('Website') }}</a>
-                    </li>
-                    <!--end::Nav item-->
-
-                    <!--begin::Nav item-->
-                    <li class="nav-item">
-                        <a class="nav-link text-active-primary me-6 setting-label" id="about-website-settings-label"
-                            href="javascript:" onclick="changeSettingView('about-website')">{{ __('About us') }}</a>
-                    </li>
-                    <!--end::Nav item-->
-
                 </ul>
             </div>
             <!--begin::Navs-->
@@ -272,155 +250,11 @@
                 </div>
                 <!-- End   :: Input group -->
 
-                <!-- Begin location :: Input group -->
-                <div class="fv-row row mb-15">
+    
 
-                    <!-- Begin :: Col -->
-                    <div class="col-md-6">
-
-                        <label class="form-label">{{ __('Address') }}</label>
-                        <input type="text" class="form-control" name="address"
-                            value="{{ settings()->getSettings('address') ?? '' }}" id="address_inp"
-                            placeholder="{{ __('Enter the address') }}">
-                        <p class="invalid-feedback" id="address"></p>
-
-                    </div>
-                    <!-- End   :: Col -->
-
-                    <!-- Begin :: Col -->
-                    <div class="col-md-6">
-
-                        <label class="form-label">{{ __('Address') }}</label>
-                        <input type="text" class="form-control" name="address_iframe"
-                            value="{{ settings()->getSettings('address_iframe') ?? '' }}" id="address_iframe_inp"
-                            placeholder="{{ __('Enter the address') }}">
-                        <p>{{ __('example') }}: <span
-                                class="text-danger fw-bolder">{{ '<iframe src="https://www.google.com/maps/.." ></iframe>' }}</span>
-                        </p>
-                        <p class="invalid-feedback" id="address_iframe"></p>
-
-                    </div>
-                    <!-- End   :: Col -->
 
                 </div>
-                <!-- End   :: Input group -->
-                <!-- Begin :: Input group -->
-                <div class="fv-row row mb-15">
-
-                    <!-- Begin :: Col -->
-                    <div class="col-md-6">
-
-                        <label class="form-label">{{ __('Tax in percentage') }}</label>
-                        <input type="text" class="form-control" name="tax"
-                            value="{{ settings()->getSettings('tax') ?? '' }}" id="tax_inp"
-                            placeholder="{{ __('Enter the tax in percentage') }}">
-                        <p class="invalid-feedback" id="tax"></p>
-
-                    </div>
-                    <!-- End   :: Col -->
-
-                    <!-- Begin :: Col -->
-                    <div class="col-md-6">
-
-                        <div class="d-flex justify-content-between align-items-center mt-12">
-
-                            <label class="form-label">{{ __('Tax active') }}</label>
-
-                            <div class="form-check form-check-custom form-check-solid my-auto">
-                                <input class="form-check-input" type="radio" value="1" name="maintenance_mode"
-                                    id="active-radio-btn"
-                                    {{ settings()->getSettings('maintenance_mode') == '1' ? 'checked' : '' }} />
-                                <label class="form-check-label me-10" for="active-radio-btn"> {{ __('active') }}
-                                </label>
-
-                                <input class="form-check-input" type="radio" value="0" name="maintenance_mode"
-                                    id="inactive-radio-btn"
-                                    {{ settings()->getSettings('maintenance_mode') == '0' ? 'checked' : '' }} />
-                                <label class="form-check-label" for="inactive-radio-btn"> {{ __('inactive') }} </label>
-                            </div>
-
-                        </div>
-                        <p class="invalid-feedback" id="maintenance_mode"></p>
-
-
-                    </div>
-                    <!-- End   :: Col -->
-
-                </div>
-                <!-- End   :: Input group -->
-                <div class="fv-row row mt-5">
-
-                    <!-- Begin :: Col -->
-                    <div class="col-md-6">
-
-                        <label class="form-label">{{ __('Min year of production available for financing') }}</label>
-                        <input type="number" class="form-control" name="Last_year_of_finance"
-                            value="{{ settings()->getSettings('Last_year_of_finance') ?? date('Y') }}"
-                            id="Last_year_of_finance_inp"
-                            placeholder="{{ __('Enter the Min year of production available for financing') }}">
-                        <p class="invalid-feedback" id="Last_year_of_finance"></p>
-
-                    </div>
-                    <!-- End   :: Col -->
-
-                    <!-- Begin :: Col -->
-                    <div class="col-md-6">
-
-                        <label class="form-label">{{ __('Min year of production available for add ads') }}</label>
-                        <input type="number" class="form-control" name="Last_year_of_ads"
-                            value="{{ settings()->getSettings('Last_year_of_ads') ?? date('Y') }}"
-                            id="Last_year_of_ads_inp"
-                            placeholder="{{ __('Enter the Min year of production available for add ads') }}">
-                        <p class="invalid-feedback" id="Last_year_of_ads"></p>
-
-                    </div>
-                    <!-- End   :: Col -->
-
-                </div>
-                <div class="fv-row row mb-15 mt-10">
-
-                    <div class="col-md-12">
-
-                        <label class="form-label">{{ __('working time') }}</label>
-                        <input type="text" class="form-control" name="working_time"
-                            value="{{ settings()->getSettings('working_time') ?? '' }}" id="working_time_inp"
-                            placeholder="{{ __('Enter the working time url') }}">
-                        <p class="invalid-feedback" id="working_time"></p>
-
-                    </div>
-                </div>
-                <h2 class="text-decoration-underline fw-bolder">{{ __('Insurance Percentage') }}</h2>
-
-                <!-- Begin :: Input group -->
-                <div class="fv-row row mb-15 mt-5">
-
-                    <!-- Begin :: Col -->
-                    <div class="col-md-6">
-
-                        <label class="form-label">{{ __('Males') }}</label>
-                        <input type="number" class="form-control" name="males_insurance"
-                            value="{{ settings()->getSettings('male_insurance') ?? 3.75 }}" id="males_insurance_inp"
-                            placeholder="{{ __('Enter the males insurance in percentage') }}">
-                        <p class="invalid-feedback" id="males_insurance"></p>
-
-                    </div>
-                    <!-- End   :: Col -->
-
-                    <!-- Begin :: Col -->
-                    <div class="col-md-6">
-
-                        <label class="form-label">{{ __('Females') }}</label>
-                        <input type="number" class="form-control" name="females_insurance"
-                            value="{{ settings()->getSettings('females_insurance') ?? 6.75 }}" id="females_insurance_inp"
-                            placeholder="{{ __('Enter the females insurance in percentage') }}">
-                        <p class="invalid-feedback" id="females_insurance"></p>
-
-                    </div>
-                    <!-- End   :: Col -->
-
-                </div>
-                <!-- End   :: Input group -->
-
+    
 
                 <!-- Begin :: Input group -->
                 <div class="fv-row row mb-15">
@@ -458,7 +292,7 @@
                 </div>
                 <!-- End   :: Input group -->
 
-                <!-- Begin :: Input group -->
+                {{-- <!-- Begin :: Input group -->
                 <div class="fv-row row mb-15">
 
                     <!-- Begin :: Col -->
@@ -534,7 +368,7 @@
                     <!-- End   :: Col -->
 
                 </div>
-                <!-- End   :: Input group -->
+                <!-- End   :: Input group --> --}}
 
             </div>
             <!-- End   :: Card body -->

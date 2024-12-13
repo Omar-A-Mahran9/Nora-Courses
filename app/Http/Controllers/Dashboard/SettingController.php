@@ -60,9 +60,6 @@ class SettingController extends Controller
         $this->validateFiles('logo', 'general', $request, $data);
         $this->validateFiles('favicon', 'general', $request, $data);
         $this->validateFiles('purchase_section_photo', 'general', $request, $data);
-        $deletestatues=$request->deletedstatus[0];
-        $deletedIdsArray = explode(',', $deletestatues);
-        $deletedIdsArray = array_map('intval', $deletedIdsArray);
     
         foreach ($data as $key => $value)
         {

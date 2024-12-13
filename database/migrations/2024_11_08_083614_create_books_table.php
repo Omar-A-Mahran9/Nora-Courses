@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateChannelGameTable extends Migration
+class CreateBooksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,14 @@ class CreateChannelGameTable extends Migration
      */
     public function up()
     {
-        Schema::create('channel_game', function (Blueprint $table) {
+        Schema::create('books', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('channel_id')->constrained()->onDelete('cascade');
-            $table->foreignId('game_id')->constrained()->onDelete('cascade');
+            $table->string('title_ar');
+            $table->string('title_en');
+            $table->longText('description_ar');
+            $table->longText('description_en');
+            $table->string('main_image');
+            $table->string('price');
             $table->timestamps();
         });
     }
@@ -28,6 +32,6 @@ class CreateChannelGameTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('channel_game');
+        Schema::dropIfExists('books');
     }
 }

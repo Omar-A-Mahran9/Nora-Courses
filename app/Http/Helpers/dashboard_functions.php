@@ -51,7 +51,7 @@ if(!function_exists('uploadImage')){
         $model        = Str::ucfirst($model);
         $path         = "/Images/".$model;
          $originalName =  $request->getClientOriginalName(); // Get file Original Name
-        $imageName    = str_replace(' ','','KoraLive_' . time() . $originalName);  // Set Image name
+        $imageName    = str_replace(' ','','Nora_' . time() . $originalName);  // Set Image name
         $request->storeAs($path, $imageName,'public');
          return $imageName;
     }
@@ -92,7 +92,7 @@ if(!function_exists('uploadImageToDirectory')){
         $model        = Str::plural($model);
         $model        = Str::ucfirst($model);
         $path         = "/Images/$model";
-        $imageName    = str_replace(' ','','KoraLive_' . time() . $imageFile->getClientOriginalName());  // Set Image name
+        $imageName    = str_replace(' ','','Nora_' . time() . $imageFile->getClientOriginalName());  // Set Image name
         $imageFile->storeAs($path, $imageName, 'public');
         return $imageName;
     }
@@ -411,7 +411,7 @@ if(!function_exists('pushNotification')) {
         $token = "e4vHwxheBK6uujxk7G9I";
         $src = 'CODE CAR';
         $dests = "$phone";
-        $appName = settings()->getSettings("website_name_" . getLocale()) ?? "KoraLive";
+        $appName = settings()->getSettings("website_name_" . getLocale()) ?? "Nora Elsfiery";
 
         $body = <<<msg
                 مرحبًا بك في $appName ! رمز التسجيل: $otp

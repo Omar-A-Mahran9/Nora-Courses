@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
     <link rel="shortcut icon" type="image/gif" sizes="16x16"
-        href="{{ settings()->getSettings('favicon') ? getImagePathFromDirectory(settings()->getSettings('favicon'), 'Settings') : asset('favicon.svg') }}" />
+        href="{{ settings()->getSettings('favicon') ? getImagePathFromDirectory(settings()->getSettings('favicon'), 'Settings') : asset('favicon.ico') }}" />
 
     <!--begin::Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +41,7 @@
             width: 100%;
             height: 100%;
             z-index: 99;
-            background: url('{{ asset('ajax-loader.gif') }}') center no-repeat #fff;
+            background: center no-repeat #fff;
             background-size: 20%;
         }
     </style>

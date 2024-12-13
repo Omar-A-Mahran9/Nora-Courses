@@ -21,9 +21,13 @@
                         fill="black" />
                 </svg>
             </span>
+
             <!--end::Svg Icon-->
         </div>
         <!--end::Aside toggler-->
+        <img src="{{ asset('images/logo.png') }}" alt="White Logo" style="filter: brightness(0) invert(1);">
+
+
     </div>
     <!--end::Brand-->
     <!--begin::Aside menu-->
@@ -35,12 +39,48 @@
             <!--begin::Menu-->
             <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500"
                 id="#kt_aside_menu" data-kt-menu="true" data-kt-menu-expand="false">
-
-                @can('view_continents')
+                @can('view_employees')
                     <div class="menu-item">
-                        <a class="menu-link {{ isTabActive('continent') }}" href="{{ route('dashboard.continent.index') }}"
+                        <a class="menu-link {{ isTabActive('employees') }}" href="{{ route('dashboard.employees.index') }}"
                             data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
                             data-bs-placement="right">
+                            <span class="menu-icon">
+                                <i class="fa fa-user-shield"></i>
+                            </span>
+                            <span class="menu-title"> {{ __('Admins') }}</span>
+                        </a>
+                    </div>
+                @endcan
+
+                @can('view_books')
+                    <div class="menu-item">
+                        <a class="menu-link {{ isTabActive('books') }}" data-bs-toggle="tooltip" data-bs-trigger="hover"
+                            href="{{ route('dashboard.books.index') }}" data-bs-dismiss="click" data-bs-placement="right">
+                            <span class="menu-icon">
+                                <i class="fa fa-book"></i>
+                            </span>
+                            <span class="menu-title"> {{ __('Books') }}</span>
+                        </a>
+                    </div>
+                @endcan
+                @can('view_articles')
+                    <div class="menu-item">
+                        <a class="menu-link {{ isTabActive('articles') }}" data-bs-toggle="tooltip" data-bs-trigger="hover"
+                            href="{{ route('dashboard.articles.index') }}" data-bs-dismiss="click"
+                            data-bs-placement="right">
+                            <span class="menu-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </span>
+                            <span class="menu-title"> {{ __('Articles') }}</span>
+                        </a>
+                    </div>
+                @endcan
+
+                {{-- @can('view_continents')
+                    <div class="menu-item">
+                        <a class="menu-link {{ isTabActive('continent') }}"
+                            href="{{ route('dashboard.continent.index') }}" data-bs-toggle="tooltip"
+                            data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
                             <span class="menu-icon">
                                 <i class="fa fa-globe"></i>
                             </span>
@@ -72,18 +112,7 @@
                         </a>
                     </div>
                 @endcan
-                @can('view_team')
-                    <div class="menu-item">
-                        <a class="menu-link {{ isTabActive('team') }}" href="{{ route('dashboard.team.index') }}"
-                            data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click"
-                            data-bs-placement="right">
-                            <span class="menu-icon">
-                                <i class="fa fa-users"></i>
-                            </span>
-                            <span class="menu-title"> {{ __('Teams') }}</span>
-                        </a>
-                    </div>
-                @endcan
+
                 @can('view_players')
                     <div class="menu-item">
                         <a class="menu-link {{ isTabActive('player') }}" href="{{ route('dashboard.player.index') }}"
@@ -145,7 +174,7 @@
                             <span class="menu-title"> {{ __('games') }}</span>
                         </a>
                     </div>
-                @endcan
+                @endcan --}}
                 @can('view_news')
                     <div class="menu-item">
                         <a class="menu-link {{ isTabActive('news') }}" href="{{ route('dashboard.news.index') }}"
@@ -172,7 +201,7 @@
                     </div>
                 @endcan
 
-                @can('view_news_subscribers')
+                {{-- @can('view_news_subscribers')
                     <div class="menu-item">
                         <a class="menu-link {{ isTabActive('news-subscribers') }}"
                             href="{{ route('dashboard.news-subscribers.index') }}" data-bs-toggle="tooltip"
@@ -183,7 +212,7 @@
                             <span class="menu-title"> {{ __('News Subscribers') }}</span>
                         </a>
                     </div>
-                @endcan
+                @endcan --}}
 
                 <!-- end   :: vendors section -->
 
@@ -359,18 +388,7 @@
                     </div>
                 @endcan
 
-                @can('view_employees')
-                    <div class="menu-item">
-                        <a class="menu-link {{ isTabActive('employees') }}"
-                            href="{{ route('dashboard.employees.index') }}" data-bs-toggle="tooltip"
-                            data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-                            <span class="menu-icon">
-                                <i class="fa fa-user-shield"></i>
-                            </span>
-                            <span class="menu-title"> {{ __('Employees') }}</span>
-                        </a>
-                    </div>
-                @endcan
+
                 {{-- @can('view_delegates')
                     <div class="menu-item">
                         <a class="menu-link {{ isTabActive('delegates') }}"

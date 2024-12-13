@@ -5,13 +5,13 @@
 
 <head>
     <base href="../../../">
-    <title>{{ __('yalla shoot - Dashboard') }}</title>
+    <title>{{ __('Nora Elsfiery - Dashboard') }}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <link rel="shortcut icon" href="{{ asset('favicon.svg') }}" />
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
 
     <!--begin::Fonts-->
     @if (isArabic())
@@ -42,18 +42,13 @@
     <div class="d-flex flex-column flex-root">
         <!--begin::Authentication - Sign-in -->
         <div class="d-flex flex-column flex-column-fluid bgi-position-y-bottom position-x-center bgi-no-repeat bgi-size-contain bgi-attachment-fixed"
-            style="background-image: url('{{ asset('dashboard-assets/yllashoot.jpeg') }}'); background-size: cover; ">
+            style="background-image: url('{{ asset('dashboard-assets/nora.jpeg') }}'); background-size: cover; ">
 
             <!--begin::Content-->
             <div class="d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20">
-                <!--begin::Logo-->
-                <a onclick="window.location.reload()" class="mb-12">
-                    <img alt="Logo" src="{{ asset('dashboard-assets/media/logos/logo-1-dark.svg') }}"
-                        class="h-90px" />
-                </a>
-                <!--end::Logo-->
+
                 <!--begin::Wrapper-->
-                <div class="w-lg-500px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto">
+                <div class="w-lg-500px bg-body rounded shadow-sm p-10 p-lg-15  ">
                     <!--begin::Form-->
                     <form class="form w-100" data-success-message="{{ __('Signed in successfully') }}"
                         data-redirection-url="{{ str_contains('/dashboard', URL::previous()) ? URL::previous() : '/dashboard' }}"
@@ -63,7 +58,8 @@
                         <!--begin::Heading-->
                         <div class="text-center mb-10">
                             <!--begin::Title-->
-                            <h1 class="text-dark mb-3">{{ __('Sign In to kora live') }}</h1>
+                            <h1 class="text-dark mb-3">{{ __('Sign In') }}</h1>
+                            <p class="text-gray mb-3">{{ __('welcome back') }}</p>
                             <!--end::Title-->
                         </div>
                         <!--begin::Heading-->
@@ -105,8 +101,8 @@
                         <div class="text-center">
                             <!--begin::Submit button-->
 
-                            <button type="submit" id="submit-btn" class="btn btn-lg btn-primary w-100 mb-5"
-                                data-kt-indicator="">
+                            <button type="submit" id="submit-btn" class="btn btn-lg text-white fw-bold  w-100 mb-5"
+                                style="background-color:#0e2819" data-kt-indicator="">
                                 <span class="indicator-label">
                                     {{ __('Sign In') }}
                                 </span>

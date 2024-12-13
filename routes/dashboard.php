@@ -17,6 +17,9 @@ Route::group(['prefix' => 'dashboard', 'namespace' => 'Dashboard', 'as' => 'dash
     Route::get('/', 'DashboardController@index')->name('index');
     Route::get('/allemployees', 'OrderController@employeeapi');
 
+    Route::resource('books', 'BookController');
+    Route::resource('articles', 'ArticlesController');
+
     Route::resource('news', 'NewsController');
     Route::resource('league', 'LeagueController');
     Route::resource('continent', 'ContinentController');
@@ -26,6 +29,7 @@ Route::group(['prefix' => 'dashboard', 'namespace' => 'Dashboard', 'as' => 'dash
     Route::resource('playground', 'PlaygroundController');
     Route::resource('games', 'GameController');
     Route::resource('team', 'TeamController');
+
     Route::resource('channel', 'ChannelController');
 
 

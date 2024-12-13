@@ -17,11 +17,11 @@ class SettingSeeder extends Seeder
         $data = [
             [
                 'option_name' => 'website_name_ar',
-                'option_value' => 'كورة لايف'
+                'option_value' => 'نورة الصفيري',
             ],
             [
                 'option_name' => 'website_name_en',
-                'option_value' => 'Kora live'
+                'option_value' => 'Nora Elsfiery'
             ],
             [
                 'option_name' => 'about_us_video',
@@ -31,10 +31,7 @@ class SettingSeeder extends Seeder
                 'option_name' => 'working_time',
                 'option_value' => 'https://www.facebook.com/'
             ],
-            [
-                'option_name' => 'working_time',
-                'option_value' => 'من الأحد الى الخميس من الساعة ٨ صباحا حتى ١٠ مساءا'
-            ],
+    
             [
                 'option_name' => 'whatsapp_url',
                 'option_value' => 'https://www.facebook.com/'
@@ -71,18 +68,7 @@ class SettingSeeder extends Seeder
                 'option_name' => 'tax',
                 'option_value' => '12'
             ],
-            [
-                'option_name' => 'males_insurance',
-                'option_value' => '3.75'
-            ],
-            [
-                'option_name' => 'females_insurance',
-                'option_value' => '6.75'
-            ],
-            [
-                'option_name' => 'maintenance_mode',
-                'option_value' => '0'
-            ],
+
             [
                 'option_name' => 'meta_tag_description_ar',
                 'option_value' => 'asdasd'
@@ -99,22 +85,7 @@ class SettingSeeder extends Seeder
                 'option_name' => 'meta_tag_keyword_en',
                 'option_value' => 'asdasd'
             ],
-            [
-                'option_name' => 'financing_body_text_in_home_page_ar',
-                'option_value' => 'قسم ميزة التمويل في الصفحة الرئيسية بالعربية'
-            ],
-            [
-                'option_name' => 'financing_body_text_in_home_page_en',
-                'option_value' => 'قسم ميزة التمويل في الصفحة الرئيسية بالإنجليزية'
-            ],
-            [
-                'option_name' => 'brand_text_in_home_page_ar',
-                'option_value' => NULL
-            ],
-            [
-                'option_name' => 'brand_text_in_home_page_en',
-                'option_value' => NULL
-            ],
+
             [
                 'option_name' => 'privacy_policy_ar',
                 'option_value' => '<p>sdf<\/p>'
@@ -321,98 +292,8 @@ class SettingSeeder extends Seeder
                 'option_name' => 'address_iframe',
                 'option_value' => '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.377599546711!2d31.202060976201665!3d30.05470911808314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584177183e24c1%3A0x89be8a01ae6e26bd!2zV2ViU1REWSAtINmI2YrYqCDYs9iq2K_Zig!5e0!3m2!1sen!2seg!4v1704114810770!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
             ],
-            [
-                'option_name' => 'financing_advantage_card_1_ar',
-                'option_value' => 'كارت 1 ميزة التمويل في الصفحة الرئيسية بالعربية'
-            ],
-            [
-                'option_name' => 'financing_advantage_card_1_en',
-                'option_value' => 'كارت 1 ميزة التمويل في الصفحة الرئيسية بالإنجليزية'
-            ],
-            [
-                'option_name' => 'financing_advantage_card_2_ar',
-                'option_value' => 'كارت 2 ميزة التمويل في الصفحة الرئيسية بالعربية'
-            ],
-            [
-                'option_name' => 'financing_advantage_card_2_en',
-                'option_value' => 'كارت 2 ميزة التمويل في الصفحة الرئيسية بالإنجليزية'
-            ],
-            [
-                'option_name' => 'financing_advantage_card_1_icon',
-                'option_value' => NULL
-            ],
-            [
-                'option_name' => 'financing_advantage_card_2_icon',
-                'option_value' => NULL
-            ],
-            [
-                'option_name' => 'financing_advantage_text_card_1_ar',
-                'option_value' => 'نص كارت 1 ميزة التمويل في الصفحة الرئيسية بالعربية'
-            ],
-            [
-                'option_name' => 'financing_advantage_text_card_1_en',
-                'option_value' => 'نص كارت 1 ميزة التمويل في الصفحة الرئيسية بالإنجليزية'
-            ],
-            [
-                'option_name' => 'financing_advantage_text_card_2_ar',
-                'option_value' => 'نص كارت 2 ميزة التمويل في الصفحة الرئيسية بالعربية'
-            ],
-            [
-                'option_name' => 'financing_advantage_text_card_2_en',
-                'option_value' => 'نص كارت 2 ميزة التمويل في الصفحة الرئيسية بالإنجليزية'
-            ],
-            [
-                'option_name' => 'why_code_car_section_card_1_ar',
-                'option_value' => 'نص كارت 1 لماذا كود كار بالعربية'
-            ],
-            [
-                'option_name' => 'why_code_car_section_card_1_en',
-                'option_value' => 'eee'
-            ],
-            [
-                'option_name' => 'why_code_car_section_card_2_ar',
-                'option_value' => 'نص كارت 2 لماذا كود كار بالعربية'
-            ],
-            [
-                'option_name' => 'why_code_car_section_card_2_en',
-                'option_value' => 'dddd'
-            ],
-            [
-                'option_name' => 'why_code_car_section_card_3_ar',
-                'option_value' => 'نص كارت 3 لماذا كود كار بالإنجليزية'
-            ],
-            [
-                'option_name' => 'why_code_car_section_card_3_en',
-                'option_value' => 'نص كارت 3 لماذا كود كار بالعربية'
-            ],
-            [
-                'option_name' => 'add_ads_ar',
-                'option_value' => NULL
-            ],
-            [
-                'option_name' => 'add_ads_en',
-                'option_value' => NULL
-            ],
-            [
-                'option_name' => 'why_code_car_icon_card_1',
-                'option_value' => NULL
-            ],
-            [
-                'option_name' => 'why_code_car_icon_card_2',
-                'option_value' => NULL
-            ],
-            [
-                'option_name' => 'why_code_car_icon_card_3',
-                'option_value' => NULL
-            ],
-            [
-                'option_name' => 'about_us_card_left_icon',
-                'option_value' => NULL
-            ],
-            [
-                'option_name' => 'about_us_card_right_icon',
-                'option_value' => NULL
-            ],
+     
+        
             [
                 'option_name' => 'setting_ar',
                 'option_value' => NULL

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit754ccdd8c8b212acf19618d48d86fa17
+class ComposerStaticInit530b48a60630d126582c5863ae6da3bc
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -649,7 +649,9 @@ class ComposerStaticInit754ccdd8c8b212acf19618d48d86fa17
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Classes\\AppSetting' => __DIR__ . '/../..' . '/app/Http/Classes/AppSetting.php',
         'App\\Http\\Controllers\\Auth\\EmployeeAuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/EmployeeAuthController.php',
+        'App\\Http\\Controllers\\ConsltationController' => __DIR__ . '/../..' . '/app/Http/Controllers/ConsltationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\Dashboard\\BookController' => __DIR__ . '/../..' . '/app/Http/Controllers/Dashboard/BookController.php',
         'App\\Http\\Controllers\\Dashboard\\CarController' => __DIR__ . '/../..' . '/app/Http/Controllers/Dashboard/CarController.php',
         'App\\Http\\Controllers\\Dashboard\\ChannelController' => __DIR__ . '/../..' . '/app/Http/Controllers/Dashboard/ChannelController.php',
         'App\\Http\\Controllers\\Dashboard\\CoachController' => __DIR__ . '/../..' . '/app/Http/Controllers/Dashboard/CoachController.php',
@@ -694,6 +696,7 @@ class ComposerStaticInit754ccdd8c8b212acf19618d48d86fa17
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\Dashboard\\StoreBooksRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/StoreBooksRequest.php',
         'App\\Http\\Requests\\Dashboard\\StoreChannelRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/StoreChannelRequest.php',
         'App\\Http\\Requests\\Dashboard\\StoreCoachesRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/StoreCoachesRequest.php',
         'App\\Http\\Requests\\Dashboard\\StoreContinentsRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/StoreContinentsRequest.php',
@@ -707,6 +710,7 @@ class ComposerStaticInit754ccdd8c8b212acf19618d48d86fa17
         'App\\Http\\Requests\\Dashboard\\StorePlaygroundRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/StorePlaygroundRequest.php',
         'App\\Http\\Requests\\Dashboard\\StoreSettingRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/StoreSettingRequest.php',
         'App\\Http\\Requests\\Dashboard\\StoreTeamsRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/StoreTeamsRequest.php',
+        'App\\Http\\Requests\\Dashboard\\UpdateBooksRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/UpdateBooksRequest.php',
         'App\\Http\\Requests\\Dashboard\\UpdateChannelRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/UpdateChannelRequest.php',
         'App\\Http\\Requests\\Dashboard\\UpdateCoachesRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/UpdateCoachesRequest.php',
         'App\\Http\\Requests\\Dashboard\\UpdateContinentsRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Dashboard/UpdateContinentsRequest.php',
@@ -734,7 +738,10 @@ class ComposerStaticInit754ccdd8c8b212acf19618d48d86fa17
         'App\\Http\\Scopes\\WithoutDefaultRole' => __DIR__ . '/../..' . '/app/Http/Scopes/WithoutDefaultRole.php',
         'App\\Http\\Traits\\Calculations' => __DIR__ . '/../..' . '/app/Http/Traits/Calculations.php',
         'App\\Models\\Ability' => __DIR__ . '/../..' . '/app/Models/Ability.php',
+        'App\\Models\\Articles' => __DIR__ . '/../..' . '/app/Models/Articles.php',
+        'App\\Models\\Book' => __DIR__ . '/../..' . '/app/Models/Book.php',
         'App\\Models\\Coach' => __DIR__ . '/../..' . '/app/Models/Coach.php',
+        'App\\Models\\Consltation' => __DIR__ . '/../..' . '/app/Models/Consltation.php',
         'App\\Models\\Continent' => __DIR__ . '/../..' . '/app/Models/Continent.php',
         'App\\Models\\Country' => __DIR__ . '/../..' . '/app/Models/Country.php',
         'App\\Models\\Employee' => __DIR__ . '/../..' . '/app/Models/Employee.php',
@@ -6900,10 +6907,10 @@ class ComposerStaticInit754ccdd8c8b212acf19618d48d86fa17
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit754ccdd8c8b212acf19618d48d86fa17::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit754ccdd8c8b212acf19618d48d86fa17::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit754ccdd8c8b212acf19618d48d86fa17::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit754ccdd8c8b212acf19618d48d86fa17::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit530b48a60630d126582c5863ae6da3bc::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit530b48a60630d126582c5863ae6da3bc::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit530b48a60630d126582c5863ae6da3bc::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit530b48a60630d126582c5863ae6da3bc::$classMap;
 
         }, null, ClassLoader::class);
     }

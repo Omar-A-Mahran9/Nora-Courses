@@ -17,22 +17,15 @@ class AdminSeeder extends Seeder
     {
         Employee::create([
             'name' => 'OmarSupport',
-            'email' => 'h.elmedraoui@gmail.com',
-            'password' => 'Koralive1@',
+            'email' => 'omar.a.m.mahran@gmail.com',
+            'password' => 'nora123',
             'phone' => '966522334455',
         ]);
         Employee::create([
-            'name' => '،Kora Live',
-            'email' => 'koralive@gmail.com',
-            'password' => 'koralive1122334455',
-            'phone' => '511223344',
-        ]);
-
-        Employee::create([
-            'name' => 'OmarSupport',
-            'email' => 'support@gmial.com',
-            'password' => 'OmarSupport1122334455',
-            'phone' => '966522334455',
+            'name' => 'nora Live',
+            'email' => 'nora@gmail.com',
+            'password' => 'nora123',
+            'phone' => '966511223344',
         ]);
     }
 }
